@@ -1,0 +1,39 @@
+*{
+    
+}
+@font-face{
+    font-family: 'Ford Folly';
+    src: url(Fonts/FordsFollyRg.TTF);
+}
+.navbar-brand{
+    font-family: 'Ford Folly';
+    font-size: 30px !important;
+    color: #000;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    margin-left: 30px;
+    font-weight: 450;
+}
+.section2 h4 {
+    --a: -45deg; 
+    --t: .23em; 
+    color: #000; 
+    --underline-color: #6839FF; 
+    --_s: calc(var(--t) * cos(var(--a)));
+    
+    background: linear-gradient(var(--a), white var(--_s), var(--underline-color) 0 calc(100% - var(--_s)), white 0) 
+                bottom/var(--i, 90%) var(--t) no-repeat;
+    
+    padding: 0 .45em calc(var(--t) + .1em);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: .3s;
+    cursor: pointer;
+}
+.section2 h4:hover{
+ 
+        --i: 100%;     
+}

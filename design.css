@@ -17,7 +17,7 @@
     margin-left: 30px;
     font-weight: 450;
 }
-.section2 h4 {
+.heading-underlined {
     --a: -45deg; 
     --t: .23em; 
     color: #000; 
@@ -33,24 +33,15 @@
     transition: .3s;
     cursor: pointer;
 }
-.section2 h4:hover{
+.heading-underlined:hover{
  
-        --i: 100%;     
+    --i: 100%;     
 }
+.design img{
+    border-radius: 10px ;
+    margin-top: 5%;
+}
+.card{
+    border: none !important;
 
-.slider-button{
-    color:#6839FF;
-    background-color: white;
-    border-radius: 100%;
-    width: 3rem;
-    height: 3rem;
 }
-.social-icons{
-    justify-content: center;
-}
-.social-icons .fab{
-    font-size: 1.5rem;
-    color: #0C0254;
-    
-}
-

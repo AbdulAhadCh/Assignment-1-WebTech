@@ -1,0 +1,329 @@
+* {
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   }
+@font-face {
+    font-family: groovy;
+    src: url('Groovy Squad.otf');
+}
+@font-face {
+    font-family: Cappung;
+    src: url('Cappung Font by 7NTypes.otf');
+}
+::-webkit-scrollbar {
+    width: 10px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #262626; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7AA93C; /* Color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e6103; /* Color of the scrollbar thumb on hover */
+}
+#checkbtn{
+    cursor: pointer;
+}
+
+
+nav {
+    background-color: #262626; /* Dark theme color */
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -90px;
+}
+nav ul {
+    float: right;
+    line-height: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+/* Styles for navigation links */
+nav li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0px 50px; /* Padding for the link text */
+    font-size: large; /* Larger font size */
+     /* Font family for the text */
+    font-weight: bold; /* Bold text */
+    position: relative; /* Required for absolute positioning */
+}
+
+/* Add a span element to wrap the text */
+nav li a span {
+    position: relative;
+     /* Required for absolute positioning */
+}
+
+/* Styling for the pseudo-element before the link text */
+nav li a span::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Positioning relative to the span */
+    width: 100%; /* Full width of the span */
+    height: 5px; /* Height of the line beneath the text */
+    background-color: #7AA93C; /* Background color of the line */
+    bottom: -8px; /* Position at the bottom of the span */
+    left: 0;
+    transform-origin: right; /* Origin point for transform */
+    transform: scaleX(0); /* Initially hidden (scaled to zero width) */
+    transition: transform.4s ease-in-out; /* Smooth transition effect */
+}
+
+/* Hover effect for the pseudo-element */
+nav li a:hover span::after {
+    transform-origin:left; /* Change transform origin for hover effect */
+    transform: scaleX(1); /* Scale the line to full width on hover */
+}
+
+
+#checkbtn {
+    float: right;
+    line-height: 100px;
+    margin-right: 10px;
+    display: none;
+    color: #7AA93C;
+}
+
+#check {
+    display: none;
+    
+}
+
+#check:checked ~ ul {
+    left: 0%;
+}
+
+@media (max-width: 824px) {
+    #checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        width: 70%;
+        height: 80vh;
+        position: fixed;
+        top: 89px;
+        left: -100%;
+        transition: .3s;
+        margin-left: -40px;
+        justify-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        block-size: 100px;
+        align-self: center;
+        line-height: 70px;
+        background-color: #262626; /* Dark theme color */
+        opacity: 100%;
+    }
+    ::-webkit-scrollbar {
+        width: 0px /* Width of the entire scrollbar */
+    }
+}
+
+
+
+/* Button styling */
+.button {
+    background-color: #7AA93C; /* Button color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #7AA93C; /* Hover color */
+}
+
+.section1{
+    background-image: url('https://res.cloudinary.com/djg0dynf2/image/upload/v1724701696/IMG_20240723_033531_rpsf7y.jpg');
+            
+            /* Set a specific height */
+            height: 100vh;
+            
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+}
+.section2{
+    background-image: url('https://res.cloudinary.com/djg0dynf2/image/upload/v1724701648/_MG_8774_rqrg7v.jpg');
+            
+            /* Set a specific height */
+            height: 100vh;
+            
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+}
+.section3{
+    background-image: url('https://res.cloudinary.com/djg0dynf2/image/upload/v1724701703/street_cover_estqg4.jpg');
+            
+            /* Set a specific height */
+            height: 100vh;
+            
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+}
+.sections button{
+    background:#7AA93C;
+    color: #fff;
+    border-radius: 7px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 30px;
+    transition: 0.05s ease-in-out;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+
+}
+.sections button:hover {
+    background-color: #1e6103; 
+    font-size: 25px;
+}
+.sections h1{
+    font-family: groovy;
+    color: #fff;
+    font-size: 50px;
+    opacity: 99%;
+    font-weight: lighter;
+    margin-top: -20px;
+}
+.section1 > *:nth-child(1),
+.section2 > *:nth-child(1),
+.section3 > *:nth-child(1){
+    transform: translateX(100%); /* Move far to the left */
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.3s ease-out, opacity 0.5s ease-out; /* Smooth transition */
+}
+
+/* Initial styles for the second child of each section */
+.section1 > *:nth-child(2),
+.section2 > *:nth-child(2),
+.section3 > *:nth-child(2) {
+    transform: translateX(-100%); /* Move far to the left */
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.7s ease-out; /* Smooth transition */
+}
+.section1.show > *:first-child,
+.section2.show > *:first-child,
+.section3.show > *:first-child {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.section1.show > *:nth-child(2),
+.section2.show > *:nth-child(2),
+.section3.show > *:nth-child(2) {
+    transform: translateX(0);
+    opacity: 1;
+}
+   
+
+.section2 h1{
+    opacity: 200%;
+}
+@media (max-width: 824px) {
+    .sections h1{
+        font-size: 30px;
+    }
+    .sections button{
+        font-size: 8px;
+        padding: 10px 20px;
+    }
+    .sections button:hover {
+        background-color: #1e6103; 
+        font-size: 10px;
+    }
+
+
+}
+.home-btn {
+    position: fixed; /* or absolute, depending on your layout */
+    width: min-content;
+    height: min-content;
+    z-index: 1000; /* Ensure this value is higher than other elements */
+    bottom: 20px;
+    right: 25px;  
+    opacity: 0;
+    /* display: none; */
+    transition: opacity 0.9s ease ;
+    
+}
+.home-btn button {
+    cursor: pointer;
+    background-color:#262626;
+    border-radius: 100%;
+    z-index: 1001; /* Slightly higher than the .home-btn container */
+    position: relative; /* Ensure the button is correctly positioned within its parent */   
+    padding: 25px 25px;
+    font-weight: bolder;
+    background-color: #fff;
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+.home-btn.show{
+    opacity: 1;
+    /* display: block; */
+}
+#fa-angle-up{
+    color:#262626;
+    font-size: 25px;
+}
+.home-btn button:hover{
+    background-color: #262626;
+    color: #fff;
+}
+.home-btn button:hover #fa-angle-up{
+    color: #fff;
+}
+
+@media (max-width: 824px) {
+    .home-btn button {
+        padding: 15px 15px;
+    }
+    #fa-angle-up{
+        font-size: 18px;
+    }
+
+}

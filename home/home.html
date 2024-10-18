@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahad Photography</title>
+    <link rel="icon" type="image/x-png" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/54e812d892.js" crossorigin="anonymous"></script>
+    
+</head>
+<nav>
+    <div class="logo">
+        <img src="logo.png" height="160px" width="160px" style="margin-top: -30px; margin-left: -30px;">
+        <input type="checkbox" id="check">
+        <label for="check"><i class="fa fa-bars" id="checkbtn"></i></label>
+        <ul id="headings">
+            <li><a href="#"><span >Home</span></a></li>
+            <li><a href="../ontact.html"><span>Contact</span></a></li>
+            <!-- <li><a href="#"><span>Gallery</span></a></li> -->
+            <!-- <li><a href="#"><span>About</span></a></li> -->
+        </ul>
+    </div>
+</nav>
+
+<body>
+
+    <div class="sections">
+        <section class="section1" id="section1">
+            <h1>Village</h1>
+            <h1>Heritage</h1>
+            <button onclick="window.location.href='../village.html';">Show More</button>
+        </section>
+        <section class="section2">
+            <h1>Nature </h1>
+           <h1>Wilderness</h1>
+            <button onclick="window.location.href= '../nature.html';">Show More</button>
+
+        </section>
+        <section class="section3">
+            <h1>Street</h1>
+            <h1>art</h1>
+            <button onclick="window.location.href = '../street.html';">Show More</button>
+        </section>
+        <div class="home-btn">
+            <button onclick="window.location.href ='#section1';">
+                <i class="fa fa-angle-up" id="fa-angle-up"></i>
+            </button>    
+            
+    </div>
+    </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    // Create an IntersectionObserver instance
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // When the section is in view, add the 'show' class
+                entry.target.classList.add('show');
+            } else {
+                // When the section is out of view, remove the 'show' class
+                entry.target.classList.remove('show');
+            }
+        });
+    }, {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.6 // 60% of the section must be visible for the callback to trigger
+    });
+
+    // Select the sections you want to observe
+    const section1 = document.querySelector('.section1');
+    const section2 = document.querySelector('.section2');
+    const section3 = document.querySelector('.section3');
+
+    // Observe each section
+    observer.observe(section1);
+    observer.observe(section2);
+    observer.observe(section3);
+});
+
+const checkbox = document.getElementById('check');
+const sections = document.getElementsByClassName('sections');
+
+checkbox.addEventListener('change', () => {
+  for (const section of sections) {
+    if (checkbox.checked) {
+      section.style.filter = 'blur(10px)';
+    }
+    else {
+      section.style.filter = 'none';
+    }
+  }
+});
+    //top button
+     const section1 = document.querySelector('.section1');
+     const homeBtn = document.querySelector('.home-btn');
+    document.addEventListener('scroll',function(){
+        if(scrollY>section1.offsetHeight){
+            homeBtn.classList.add('show');
+        }
+        else{
+            homeBtn.classList.remove('show');
+            }
+    });
+    //
+    const nav = document.querySelector('nav');
+
+document.addEventListener('click', (e) => {
+    for (const section of sections) {
+  if (!nav.contains(e.target) && checkbox.checked) {
+    checkbox.checked = false;
+    section.style.filter = 'none';
+  }}
+});
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

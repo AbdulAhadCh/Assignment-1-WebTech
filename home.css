@@ -54,3 +54,13 @@
     
 }
 
+.card-img-top-skills {
+    max-width: 170px;
+    max-height: 170px;
+    filter: grayscale(100%);
+    padding: 30px;
+}
+.fa-star{
+    color: #6839FF;
+}
+
